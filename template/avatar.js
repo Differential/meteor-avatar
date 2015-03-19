@@ -2,7 +2,7 @@ Template.avatar.helpers({
 
   size: function () {
     var valid = ['large', 'small', 'extra-small'];
-    return _.contains(valid, this.size) ? 'avatar-' + this.size : '';
+    return _.contains(valid, this.size) ? 'ma-avatar-' + this.size : '';
   },
 
   dimensions: function () {
@@ -17,14 +17,14 @@ Template.avatar.helpers({
 
   shape: function () {
     var valid = ['rounded', 'circle'];
-    return _.contains(valid, this.shape) ? 'avatar-' + this.shape : '';
+    return _.contains(valid, this.shape) ? 'ma-avatar-' + this.shape : '';
   },
 
   hideClass: function () {
     // If image loaded successfully, hide initials and show image.
     // Otherwise, hide image and show initials.
     var hasImage = Template.instance().hasImage.get();
-    return hasImage ? 'avatar-hide-initials' : 'avatar-hide-image';
+    return hasImage ? 'ma-avatar-hide-initials' : 'ma-avatar-hide-image';
   },
 
   class: function () { return this.class; },
